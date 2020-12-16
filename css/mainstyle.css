@@ -1,0 +1,210 @@
+/*--------HTML---------------------------------------------------------------*/
+html::-webkit-scrollbar {
+    display: none;
+  }
+
+body{
+    color: white;
+    font-family: 'Cormorant Garamond', serif;
+    overflow-x: hidden;
+    display: grid;
+    grid-template-areas:"bovenbalk""inhoud""onderbalk";
+}
+
+/*------GRID------*/
+header{grid-area:bovenbalk;}nav{grid-area:menu;}footer{grid-area:onderbalk;}main{grid-area:inhoud;}
+
+/*--------HEADER------------------------------------------------------------*/
+
+
+/*--------NAV-------------------------------------------------------------*/
+
+
+nav{
+    background:rgba(0,0,0,0.8);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9;
+    width: 100%;
+    padding: 15px;
+    font-size: 1.3rem;
+    display: inline;
+}
+
+nav span{
+    display: inline;
+    padding-right: 20px;
+    border-right: 1px solid white;
+}
+
+nav ul{
+    display: inline;
+}
+
+nav ul li{
+    display: inline;
+    margin: 20px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    margin-bottom: 5px;
+    color: white;
+    margin: 0px 0px 0px 20px;
+}
+
+nav ul .current::before{
+    background-image: url(../images/marker.png);
+    background-size: 17px 25px;
+    background-repeat: no-repeat;
+    background-position-y: -5px;
+    position: fixed;
+    display: inline-block;
+    width: 17px; 
+    height: 25px;
+    content:"";  
+}
+
+nav ul .current{
+    text-shadow: 0 0 10px white; 
+}
+
+nav ul:hover .current,nav ul:hover .current::before{
+    text-shadow: none;
+    background-image: none;
+}
+
+nav ul li:hover::before{
+    background-image: url(../images/marker.png) !important;
+    background-size: 17px 25px;
+    background-repeat: no-repeat;
+    background-position-y: -5px;
+    position: fixed;
+    display: inline-block;
+    width: 17px; 
+    height: 25px;
+    content:"";
+}
+
+nav ul li a:hover{
+    text-shadow: 0 0 10px white; 
+}
+/*--------MAIN----------------------------------------------------------*/
+.flex-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+/*--------INTERMISSION---------*/
+#intermission{
+    background-image: url(../images/background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 35vh;
+    text-align: center;
+    position: relative;
+}
+
+#intermission .flex-container{
+    flex-direction: column;
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+#intermission .flex-item{
+    padding: 25px;
+    width: 35vw;
+    text-align: center;
+    color: white;
+}
+
+#intermission .flex-container img{
+    width: 60%;
+    margin: auto;
+}
+
+#intermission h1{
+    font-size: 2.1rem;
+}
+
+#intermission h2{
+    font-size: 1.4rem;
+}
+
+/*--------REVIEW---------*/
+#review{
+    background-image: url(../images/skyrim-stance.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 90vh;
+    width: 100vw;
+    color: white;
+    position: relative;
+}
+
+#review .flex-container{
+    justify-content: space-around;
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%,-50%);
+    width: 100vw;
+}
+
+#review .flex-item{
+    font-family: 'Acme', sans-serif;
+    width: 30%;
+    padding: 100px;
+    font-size: 2.8rem;
+    text-shadow: 2px 2px black;
+}
+
+/*--------STORY---------*/
+#story{
+    background-image: url(../images/skyrim-story.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 80vh;
+    width: 100vw;
+}
+
+#story-inner{
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.1));
+    width: 100vw;
+    height: 100%;
+}
+
+#story .flex-container{
+   flex-direction: column;
+   padding: 150px 0px 0px 80px;
+}
+
+#story .flex-item{
+    width: 40%;
+    height: 10%;
+}
+
+#story h1{
+    font-size: 2.5rem;
+}
+
+#story p{
+    font-size: 1.2rem;
+    padding: 70px 15px 15px 15px;
+    line-height: 1.5;
+}
+
+/*--------FOOTER----------------------------------------------------------*/
+
+footer{
+    bottom: 0;
+    width: 100%;
+    background-color: black;
+    color: white;
+    padding: 5px;
+}
