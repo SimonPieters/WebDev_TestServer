@@ -39,7 +39,7 @@ main .character-info img:hover{
     transition: 0.5s;
     cursor: pointer;
 }
-main .sound{
+main .character-info .sound{
     background-image: url(../images/sound_icon.png);
     background-position: center;
     background-repeat: no-repeat;

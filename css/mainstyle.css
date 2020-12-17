@@ -1,7 +1,18 @@
+/*--------MEDIA---------------------------------------------------------------*/
+@media only screen and (min-width: 150px) and (max-width:560px){
+    nav span{
+        display: none !important;
+    }
+}
+
 /*--------HTML---------------------------------------------------------------*/
+html {
+    overflow-x: hidden;
+}
+
 html::-webkit-scrollbar {
     display: none;
-  }
+}
 
 body{
     color: white;
@@ -23,10 +34,7 @@ header{grid-area:bovenbalk;}nav{grid-area:menu;}footer{grid-area:onderbalk;}main
 nav{
     background:rgba(0,0,0,0.8);
     position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 9;
-    width: 100%;
+    width: 100vw;
     padding: 15px;
     font-size: 1.3rem;
     display: inline;
@@ -91,6 +99,9 @@ nav ul li a:hover{
     text-shadow: 0 0 10px white; 
 }
 /*--------MAIN----------------------------------------------------------*/
+main{
+    width: 100vw;
+}
 .flex-container{
     display: flex;
     flex-direction: row;
@@ -101,7 +112,7 @@ nav ul li a:hover{
 
 footer{
     bottom: 0;
-    width: 100%;
+    width: 100vw;
     background-color: black;
     color: white;
     padding: 5px;
