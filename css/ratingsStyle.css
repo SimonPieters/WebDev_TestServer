@@ -1,0 +1,97 @@
+/*--------KEYFRAMES---------------------------------------------------------------*/
+@keyframes slideInFromLeft {
+    0% {
+      width: 58px;
+    }
+    100% {
+      width: 100%;
+    }
+  }
+
+/*--------HTML---------------------------------------------------------------*/
+body{
+    background-image: url(../images/ratings_background.jpg);
+    background-position: center;
+    background-position-y: 0;
+}
+
+/*--------HEADER------------------------------------------------------------*/
+
+/*--------NAV-------------------------------------------------------------*/
+
+
+/*--------MAIN----------------------------------------------------------*/
+main .rating .flex-container{grid-area: logo;}
+main .rating .score-outer{grid-area: score;}
+main{
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 50px;
+    
+}
+main .rating{
+    display: grid;
+    grid-template-areas: 
+    "logo" 
+    "score";
+    width: 80vw;
+    height: 30vh;
+    background-color: rgba(0,0,0,0.5);
+    padding: 0 10px 0 10px;
+}
+
+main .rating .flex-container{
+    margin-top: 20px;
+}
+
+main .rating .flex-container div{
+    width: 20%;
+}
+
+main .rating .flex-container p{
+    width: 60%;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-shadow: 1px 3px black;
+}
+
+main .rating .score-outer{
+    width: 58px;
+    height: 30px;
+}
+
+main .rating .score-inner{
+    background-image: url(../images/background.jpg);
+    background-position: center;
+    background-size: cover;
+    border: white 1px solid;
+    position: relative;
+    font-size: 1.8rem;
+    font-weight: 800;
+    width: 58px;
+    height: 30px;
+    padding: 3px 10px 8px 10px;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+    animation: 1s ease-out 0s 1 slideInFromLeft;
+}
+
+main #AbsoluteGames .score-outer,main #AbsoluteGames .score-inner{
+    width: 468px;
+}
+
+main #PCgames .score-outer, main #PCgames .score-inner{
+    width: 546px;
+}
+
+main #Gamescz .score-outer, main #Gamescz .score-inner{
+    width: 600px;
+}
+
+main #empire .score-outer, main #empire .score-inner{
+    width: 600px;
+}
+
+
+/*--------FOOTER----------------------------------------------------------*/
+

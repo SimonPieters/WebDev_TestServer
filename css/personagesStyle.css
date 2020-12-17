@@ -29,7 +29,21 @@ main .character-info{
 
 main .character-info img{
     height: 65vh;
-    border-radius: 10%;
+    border-radius: 5%;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.4);
+    transition: 0.5s;
+}
+
+main .character-info img:hover{
+    opacity: 0.4;
+    transition: 0.5s;
+    cursor: pointer;
+}
+main .sound{
+    background-image: url(../images/sound_icon.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 40%;
 }
 main .character-infoText h1{
     font-size: 5rem;
@@ -106,7 +120,7 @@ main .character-infoText p {
   .carousel__navigation-item-outer{  
     position: relative;
     text-align: center;
-    height: 170px;
+    height: 180px;
     width: 115px;
   }
 
@@ -117,12 +131,13 @@ main .character-infoText p {
     height: 150px;
     width: 95px;
     border-radius: 10%;
+    transition: 0.3s;
   }
 
   .carousel__navigation-item img:hover {
     transition: 0.3s;
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.5);
-    height: 170px;
+    height: 180px;
     width: 115px;
     border: 1px solid white;
   }
