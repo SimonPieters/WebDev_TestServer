@@ -128,6 +128,8 @@ header img{
 }
 
 /*--------FOOTER----------------------------------------------------------*/
+
+/*--------MEDIA----------------------------------------------------------*/
 @media only screen and (max-width: 1100px){
     #intermission .flex-container img{
         width: 40%;
@@ -181,6 +183,12 @@ header img{
    }
 }
 @media only screen and (max-width: 500px){
+    header img{
+        width: 60%;
+    }
+    #review .flex-item{
+        padding: 30px;
+    }
     #story .flex-container{
         flex-direction: column;
         padding: 60px 0px 0px 40px;
@@ -191,6 +199,34 @@ header img{
    
    #story p{
        font-size: 1.2rem;
+       padding: 70px 15px 15px 15px;
+       line-height: 1.2;
+    }
+}
+@media only screen and (max-width: 380px){
+    
+    #intermission .flex-item{
+        font-size: 1.7rem;
+        padding: 15px;
+    }
+    #intermission .flex-container img{
+        width: 60%;
+    }
+    #review .flex-item{
+        font-size: 1.7rem;
+        padding: 30px;
+    }
+    #story .flex-container{
+        flex-direction: column;
+        padding: 60px 0px 0px 20px;
+        width: 100vw;
+     }
+    #story h1{
+       font-size: 1.55rem;
+    }
+   
+   #story p{
+       font-size: 1.1rem;
        padding: 70px 15px 15px 15px;
        line-height: 1.2;
     }
