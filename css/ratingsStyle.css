@@ -27,25 +27,28 @@ main{
     flex-direction: column;
     justify-content: center;
     margin-top: 50px;
-    
+    padding-bottom: 15px;
 }
+
 main .rating{
     display: grid;
     grid-template-areas: 
     "logo" 
     "score";
+    grid-gap: 50px;
     width: 80vw;
-    height: 30vh;
+    margin: 30px 0 0 0 ;
     background-color: rgba(0,0,0,0.5);
     padding: 0 10px 0 10px;
 }
 
 main .rating .flex-container{
+    flex-wrap: nowrap;
     margin-top: 20px;
 }
 
 main .rating .flex-container div{
-    width: 20%;
+    width: 220px;
 }
 
 main .rating .flex-container p{
@@ -92,6 +95,66 @@ main #empire .score-outer, main #empire .score-inner{
     width: 600px;
 }
 
+main #metacritic .score-outer, main #metacritic .score-inner{
+    width: 564px;
+}
+main #metacritic img{
+    width: 40%;
+}
 
 /*--------FOOTER----------------------------------------------------------*/
 
+/*--------MEDIA----------------------------------------------------------*/
+@media only screen and (max-width: 700px){
+    main #AbsoluteGames .score-outer,main #AbsoluteGames .score-inner{
+        width: 234px;
+    }
+    
+    main #PCgames .score-outer, main #PCgames .score-inner{
+        width: 273px;
+    }
+    
+    main #Gamescz .score-outer, main #Gamescz .score-inner{
+        width: 300px;
+    }
+    
+    main #empire .score-outer, main #empire .score-inner{
+        width: 300px;
+    }
+    
+    main #metacritic .score-outer, main #metacritic .score-inner{
+        width: 282px;
+    }
+    main .rating .flex-container{
+        flex-direction: column;
+    }
+    main .rating .flex-container div{
+        margin-bottom: 10px;
+    }
+    main .rating .flex-container p{
+        width: 100%;
+    }
+}
+@media only screen and (max-width: 360px){
+    main #AbsoluteGames .score-outer,main #AbsoluteGames .score-inner{
+        width: 117px;
+    }
+    
+    main #PCgames .score-outer, main #PCgames .score-inner{
+        width: 118px;
+    }
+    
+    main #Gamescz .score-outer, main #Gamescz .score-inner{
+        width: 150px;
+    }
+    
+    main #empire .score-outer, main #empire .score-inner{
+        width: 150px;
+    }
+    main #metacritic .score-outer, main #metacritic .score-inner{
+        width: 141px;
+    }
+    main .rating .flex-container p{
+        font-size: 1.2rem;
+    }
+}
